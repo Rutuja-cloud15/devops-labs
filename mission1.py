@@ -1,3 +1,4 @@
+"""
 name = "SRE"
 print("Hello, there!")
 print(name)
@@ -23,3 +24,14 @@ for num in range(1,21):
         print("Dev")
    else:
         print(num)
+"""
+
+servers = {"frontend-prod", "backend-prod","database-secure", "testing-sandbox"
+}
+print("---STARTING INFRASTRUCTURE AUDIT---")
+for server in servers:
+   if "sandbox" in server:
+       print("Ignoring non-critical machine:", server)
+   else:
+       print("Deploying security updates to critical server:", server)
+print("---AUDIT COMPLETE---")
